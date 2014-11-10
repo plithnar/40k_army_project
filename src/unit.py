@@ -1,4 +1,5 @@
 import random
+import weapon
 """
 " Base class for all humanoid units, not applicable for vehicles
 """
@@ -8,17 +9,18 @@ class Unit:
     " a comparison for all other units.
     """
     def __init__(self, values):
-        self.weapon_skill = values[0]
-        self.ballistics_skill = values[1]
-        self.strength = values[2]
-        self.toughness = values[3]
-        self.wounds = values[4]
-        self.initiative = values[5]
-        self.melee_attacks = values[6]
-        self.leadership = values[7]
-        self.armor_save = values[8]
-        self.ranged_weapon = None
-        self.melee_weapon = None
+        self.name = values[0]
+        self.weapon_skill = values[1]
+        self.ballistics_skill = values[2]
+        self.strength = values[3]
+        self.toughness = values[4]
+        self.wounds = values[5]
+        self.initiative = values[6]
+        self.melee_attacks = values[7]
+        self.leadership = values[8]
+        self.armor_save = values[9]
+        self.ranged_weapon = weapon.ranged_weapons[values[10]]
+        self.melee_weapon = weapon.melee_weapons[values[11]]
 
     def armRangedWeapon(self, ranged_weapon):
         self.ranged_weapon = ranged_weapon
@@ -74,3 +76,8 @@ class Unit:
                 enemy_unit.wounds = 0
             else:
                 enemy_unit.wounds -= 1
+
+SpcMarine = Unit(["Space Marine", 4, 4, 4, 4, 1, 4, 1, 8, 3, "Bolt Gun", ""])
+SpcMarineSrg = Unit(["Space Marine Sergeant", 4, 4, 4, 4, 2, 4, 1, 9, 3, "Bolt Gun", ""])
+
+PreloadedUnits = {"Space Marine" : SpcMarine, "Space Marine Sergeant" : SpcMarineSrg}
