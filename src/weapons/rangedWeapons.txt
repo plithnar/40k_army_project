@@ -1,3 +1,21 @@
+Assault cannon, 24, 6, 4, Heavy, 4, Rending
+Autocannon, 48, 7, 4, Heavy, 2
 Boltgun, 24, 4, 5, Rapid Fire
-Meltagun, 12, 8, 1, Assault, 1, Melta
 Bolt pistol, 12, 4, 5, Pistol
+Flamer, Template, 4, 5, Assault, 1
+Firestorm, Template, 6, 3, Heavy, 1
+Heavy bolter, 36, 5, 4, Heavy, 3
+Heavy flamer, Template, 5, 4, Assault, 1
+Kraken bolt, 30, 4, 4, Rapid Fire
+Lascannon, 48, 9, 2, Heavy, 1
+Meltagun, 12, 8, 1, Assault, 1, Melta
+Missile Launcher, 48, 8, 3, Heavy, 1
+Multi-Melta, 24, 8, 1, Heavy, 1, Melta
+Plasma cannon, 36, 7, 2, Heavy, 1, Blast, Gets Hot
+Plasma gun, 24, 7, 2, Rapid Fire, Gets Hot
+Plasma pistol, 12, 7, 2, Pistol, Gets Hot
+Shotgun, 12, 4, , Assault, 2
+Sniper rifle, 36, 3, 6, Heavy, 1, Sniper
+Storm bolter 24, 4, 5, Assault, 2
+
+
