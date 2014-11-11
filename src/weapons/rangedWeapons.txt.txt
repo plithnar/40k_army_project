@@ -1,3 +1,0 @@
-Boltgun, 24, 4, 5, Rapid Fire
-Meltagun, 12, 8, 1, Assault, 1, Melta
-Bolt pistol, 12, 4, 5, Pistol

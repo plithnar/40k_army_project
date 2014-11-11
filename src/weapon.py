@@ -22,10 +22,18 @@ class Weapon:
 #ranged_weapons = {"Bolt Gun" : boltGun}
 #melee_weapons = {"" : ""}
 
-ranged_weapons = {}
+ranged_weapons = {"":""}
+melee_weapons = {"":""}
 
-ranged = open("rangedWeapons.txt")
+ranged = open("weapons/rangedWeapons.txt")
 reader = csv.reader(ranged)
 for row in reader:
     weapon = Weapon(row)
     ranged_weapons[row[0]] = weapon
+
+melee = open("weapons/meleeWeapons.txt")
+reader = csv.reader(melee)
+for row in reader:
+    weapon = Weapon(row)
+    print(row)
+    melee_weapons[row[0]] = weapon

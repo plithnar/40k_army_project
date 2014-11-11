@@ -77,7 +77,7 @@ class Unit:
             else:
                 enemy_unit.wounds -= 1
 
-SpcMarine = Unit(["Space Marine", 4, 4, 4, 4, 1, 4, 1, 8, 3, "Bolt Gun", ""])
-SpcMarineSrg = Unit(["Space Marine Sergeant", 4, 4, 4, 4, 2, 4, 1, 9, 3, "Bolt Gun", ""])
+SpcMarine = Unit(["Space Marine", 4, 4, 4, 4, 1, 4, 1, 8, 3, "Boltgun", ""])
+SpcMarineSrg = Unit(["Space Marine Sergeant", 4, 4, 4, 4, 2, 4, 1, 9, 3, "Boltgun", ""])
 
 PreloadedUnits = {"Space Marine" : SpcMarine, "Space Marine Sergeant" : SpcMarineSrg}
