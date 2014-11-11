@@ -1,0 +1,2 @@
+Chainsword, , , , Melee
+Chainfist, , x2, 2, Melee, Armourbane, Unwieldy
