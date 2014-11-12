@@ -1,5 +1,6 @@
 import random
 import weapon
+import csv
 """
 " Base class for all humanoid units, not applicable for vehicles
 """
@@ -19,8 +20,6 @@ class Unit:
         self.melee_attacks = values[7]
         self.leadership = values[8]
         self.armor_save = values[9]
-        self.ranged_weapon = weapon.ranged_weapons[values[10]]
-        self.melee_weapon = weapon.melee_weapons[values[11]]
 
     def armRangedWeapon(self, ranged_weapon):
         self.ranged_weapon = ranged_weapon
@@ -77,7 +76,10 @@ class Unit:
             else:
                 enemy_unit.wounds -= 1
 
-SpcMarine = Unit(["Space Marine", 4, 4, 4, 4, 1, 4, 1, 8, 3, "Boltgun", ""])
-SpcMarineSrg = Unit(["Space Marine Sergeant", 4, 4, 4, 4, 2, 4, 1, 9, 3, "Boltgun", ""])
+PreloadedUnits = {"":""}
 
-PreloadedUnits = {"Space Marine" : SpcMarine, "Space Marine Sergeant" : SpcMarineSrg}
+units = open("units/units.txt")
+reader = csv.reader(units)
+for row in reader:
+    unit = Unit(row)
+    PreloadedUnits[row[0]] = unit

@@ -18,10 +18,6 @@ class Weapon:
         self.type = values[3]
         self.special = values[4::]
 
-#boltGun = Weapon([24, 4, 5, "Rapid Fire"])
-#ranged_weapons = {"Bolt Gun" : boltGun}
-#melee_weapons = {"" : ""}
-
 ranged_weapons = {"":""}
 melee_weapons = {"":""}
 
@@ -35,5 +31,4 @@ melee = open("weapons/meleeWeapons.txt")
 reader = csv.reader(melee)
 for row in reader:
     weapon = Weapon(row)
-    print(row)
     melee_weapons[row[0]] = weapon
