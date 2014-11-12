@@ -6,20 +6,39 @@ import csv
 """
 class Unit:
     """
-    " Initializes unit to the generic Space Marine values, which are used as
+    " Initializes unit to the generic Space Marine incoming, which are used as
     " a comparison for all other units.
     """
-    def __init__(self, values):
-        self.name = values[0]
-        self.weapon_skill = values[1]
-        self.ballistics_skill = values[2]
-        self.strength = values[3]
-        self.toughness = values[4]
-        self.wounds = values[5]
-        self.initiative = values[6]
-        self.melee_attacks = values[7]
-        self.leadership = values[8]
-        self.armor_save = values[9]
+    def __init__(self, incoming):
+            print(incoming)
+            self.name = incoming[0]
+            self.weapon_skill = eval(incoming[1])
+            self.ballistics_skill = eval(incoming[2])
+            self.strength = eval(incoming[3])
+            self.toughness = eval(incoming[4])
+            self.wounds = eval(incoming[5])
+            self.initiative = eval(incoming[6])
+            self.melee_attacks = eval(incoming[7])
+            self.leadership = eval(incoming[8])
+            self.armor_save = eval(incoming[9])
+
+    def __repr__(self):
+        return "Unit({})".format(self.name)
+    
+    def copystr(self):
+        message = []
+        message.append(self.name)
+        message.append(self.weapon_skill)
+        message.append(self.ballistics_skill)
+        message.append(self.strength)
+        message.append(self.toughness)
+        message.append(self.wounds)
+        message.append(self.initiative)
+        message.append(self.melee_attacks)
+        message.append(self.leadership)
+        message.append(self.armor_save)
+        print(message)
+        return message
 
     def armRangedWeapon(self, ranged_weapon):
         self.ranged_weapon = ranged_weapon

@@ -14,6 +14,6 @@ Multi-Melta, 24, 8, 1, Heavy, 1, Melta
 Plasma cannon, 36, 7, 2, Heavy, 1, Blast, Gets Hot
 Plasma gun, 24, 7, 2, Rapid Fire, Gets Hot
 Plasma pistol, 12, 7, 2, Pistol, Gets Hot
-Shotgun, 12, 4, , Assault, 2
+Shotgun, 12, 4, 7, Assault, 2
 Sniper rifle, 36, 3, 6, Heavy, 1, Sniper
-Storm bolter 24, 4, 5, Assault, 2
+Storm bolter, 24, 4, 5, Assault, 2S

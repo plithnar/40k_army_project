@@ -1,15 +1,15 @@
-Chainsword, , , , Melee
-Chainfist, , x2, 2, Melee, Armourbane, Unwieldy
-Close combat weapon, , , , Melee
-Eviscerator, , x2, 2, Melee, Armourbane, Two-handed, Unwieldy
-Force axe, , +1, 2, Melee, Force, Unwieldy
-Force stave, , +2, 4, Melee, Force, Concussive
-Force sword, , , 3, Melee, Force
-Heavy chainsword, , +2, 5, Melee, Two-handed
-Lightning claw, , , 3, Melee, Shread
-Power axe, , +1, 2, Melee, Unwieldy
-Power fist, , x2, 2, Melee, Unwieldy
-Power klaw, , x2, 2, Melee, Unwieldy
-Power sword, , , 3, Melee
-Thunder hammer, , x2, 2, Melee, Concussive, Unwieldy
-Witchblade, , , , Melee, Armourbane, Fleshbane
+Chainsword, 0, 0, 0, Melee
+Chainfist, 0, "x2", 2, Melee, Armourbane, Unwieldy
+Close combat weapon, 0, 0, 0, Melee
+Eviscerator, 0, "x2", 2, Melee, Armourbane, Two-handed, Unwieldy
+Force axe, 0, "+1", 2, Melee, Force, Unwieldy
+Force stave, 0, "+2", 4, Melee, Force, Concussive
+Force sword, 0, 0, 3, Melee, Force
+Heavy chainsword, 0, +2, 5, Melee, Two-handed
+Lightning claw, 0, 0, 3, Melee, Shread
+Power axe, 0, "+1", 2, Melee, Unwieldy
+Power fist, 0, "x2", 2, Melee, Unwieldy
+Power klaw, 0, "x2", 2, Melee, Unwieldy
+Power sword, 0, 0, 3, Melee
+Thunder hammer, 0, "x2", 2, Melee, Concussive, Unwieldy
+Witchblade, 0, 0, 0, Melee, Armourbane, Fleshbane

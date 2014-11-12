@@ -12,11 +12,11 @@ class Weapon:
     " a comparison for all other units.
     """
     def __init__(self, values):
-        self.range = values[0]
-        self.strength = values[1]
-        self.armor_pierce = values[2]
-        self.type = values[3]
-        self.special = values[4::]
+        self.range = values[1]
+        self.strength = eval(values[2])
+        self.armor_pierce = eval(values[3])
+        self.type = values[4]
+        self.special = values[5::]
 
 ranged_weapons = {"":""}
 melee_weapons = {"":""}

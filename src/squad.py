@@ -21,9 +21,21 @@ class Squad:
                 rangedWeapon = unit_info[1]
                 meleeWeapon = unit_info[2]
                 unit_to_add = unit.PreloadedUnits[name]
+                message = []
+                message.append(unit_to_add.name)
+                message.append(unit_to_add.weapon_skill.__str__())
+                message.append(unit_to_add.ballistics_skill.__str__())
+                message.append(unit_to_add.strength.__str__())
+                message.append(unit_to_add.toughness.__str__())
+                message.append(unit_to_add.wounds.__str__())
+                message.append(unit_to_add.initiative.__str__())
+                message.append(unit_to_add.melee_attacks.__str__())
+                message.append(unit_to_add.leadership.__str__())
+                message.append(unit_to_add.armor_save.__str__())
+                unit_to_add = unit.Unit(message)
                 unit_to_add.armRangedWeapon(weapon.ranged_weapons[rangedWeapon])
                 unit_to_add.armMeleeWeapon(weapon.melee_weapons[meleeWeapon])
-                self.units.append(unit.PreloadedUnits[name])
+                self.units.append(unit_to_add)
         self.point_cost = eval(values[3])
         self.additional_units = eval(values[4]) #dic keyed on unit name for point cost with default equipment
         self.min_size = eval(values[5])
