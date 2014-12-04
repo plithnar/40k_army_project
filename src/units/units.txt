@@ -1,22 +1,22 @@
-Apothecary, 4, 4, 4, 4, 1, 4, 2, 9, 3
-Attack Bike, 4, 4, 4, 5, 2, 4, 2, 8, 3
-Biker Sergeant, 4, 4, 4, 5, 1, 4, 2, 9, 3
-Captain, 6, 5, 4, 4, 3, 5, 3, 10, 3
-Chaplain, 5, 4, 4, 4, 2, 4, 2, 10, 3
-Chapter Champion, 5, 4, 4, 4, 1, 4, 3, 10, 2
-Chapter Master, 6, 5, 4, 4, 3, 5, 3, 10, 3
-Company Champion, 5, 4, 4, 4, 1, 4, 2, 9, 3
-Damned Legionnaire, 4, 4, 4, 4, 1, 4, 2, 10, 3
-Damned Sergeant, 5, 4, 4, 4, 1, 4, 2, 10, 3
-Honour Guard, 4, 4, 4, 4, 1, 4, 2, 10, 2
-Librarian, 5, 4, 4, 4, 2, 4, 2, 10, 3
-Scout, 3, 3, 4, 4, 1, 4, 1, 8, 4
-Scout Biker, 3, 3, 4, 5, 1, 4, 1, 8, 4
-Scout Biker Sergeant, 4, 4, 4, 5, 1, 4, 2, 9, 4
-Scout Sergeant, 4, 4, 4, 4, 1, 4, 2, 9, 4
-Space Marine, 4, 4, 4, 4, 1, 4, 1, 8, 3
-Space Marine Biker, 4, 4, 4, 5, 1, 4, 1, 8, 3
-Space Marine Sergeant, 4, 4, 4, 4, 2, 4, 1, 9, 3
-Terminator, 4, 4, 4, 4, 1, 4, 2, 9, 2
-Terminator Sergeant, 4, 4, 4, 4, 1, 4, 2, 9, 2
-Veteran, 4, 4, 4, 4, 1, 4, 2, 9, 3
+Apothecary, 4, 4, 4, 4, 1, 4, 2, 9, 3, 7
+Attack Bike, 4, 4, 4, 5, 2, 4, 2, 8, 3, 7
+Biker Sergeant, 4, 4, 4, 5, 1, 4, 2, 9, 3, 7
+Captain, 6, 5, 4, 4, 3, 5, 3, 10, 3, 7
+Chaplain, 5, 4, 4, 4, 2, 4, 2, 10, 3, 7
+Chapter Champion, 5, 4, 4, 4, 1, 4, 3, 10, 2, 5
+Chapter Master, 6, 5, 4, 4, 3, 5, 3, 10, 3, 7
+Company Champion, 5, 4, 4, 4, 1, 4, 2, 9, 3, 7
+Damned Legionnaire, 4, 4, 4, 4, 1, 4, 2, 10, 3, 7
+Damned Sergeant, 5, 4, 4, 4, 1, 4, 2, 10, 3, 7
+Honour Guard, 4, 4, 4, 4, 1, 4, 2, 10, 2, 5
+Librarian, 5, 4, 4, 4, 2, 4, 2, 10, 3, 7
+Scout, 3, 3, 4, 4, 1, 4, 1, 8, 4, 7
+Scout Biker, 3, 3, 4, 5, 1, 4, 1, 8, 4, 7
+Scout Biker Sergeant, 4, 4, 4, 5, 1, 4, 2, 9, 4, 7
+Scout Sergeant, 4, 4, 4, 4, 1, 4, 2, 9, 4, 7
+Space Marine, 4, 4, 4, 4, 1, 4, 1, 8, 3, 7
+Space Marine Biker, 4, 4, 4, 5, 1, 4, 1, 8, 3, 7
+Space Marine Sergeant, 4, 4, 4, 4, 2, 4, 1, 9, 3, 7
+Terminator, 4, 4, 4, 4, 1, 4, 2, 9, 2, 5
+Terminator Sergeant, 4, 4, 4, 4, 1, 4, 2, 9, 2, 5
+Veteran, 4, 4, 4, 4, 1, 4, 2, 9, 3, 7

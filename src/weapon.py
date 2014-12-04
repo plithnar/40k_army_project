@@ -16,7 +16,8 @@ class Weapon:
         self.strength = eval(values[2])
         self.armor_pierce = eval(values[3])
         self.type = values[4]
-        self.special = values[5::]
+        self.attacks = values[5]
+        self.special = values[6::]
 
 ranged_weapons = {"":""}
 melee_weapons = {"":""}

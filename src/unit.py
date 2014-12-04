@@ -10,7 +10,6 @@ class Unit:
     " a comparison for all other units.
     """
     def __init__(self, incoming):
-            print(incoming)
             self.name = incoming[0]
             self.weapon_skill = eval(incoming[1])
             self.ballistics_skill = eval(incoming[2])
@@ -21,6 +20,7 @@ class Unit:
             self.melee_attacks = eval(incoming[7])
             self.leadership = eval(incoming[8])
             self.armor_save = eval(incoming[9])
+            self.invuln_save = eval(incoming[10])
 
     def __repr__(self):
         return "Unit({})".format(self.name)
@@ -37,7 +37,7 @@ class Unit:
         message.append(self.melee_attacks)
         message.append(self.leadership)
         message.append(self.armor_save)
-        print(message)
+        message.append(self.invuln_save)
         return message
 
     def armRangedWeapon(self, ranged_weapon):
@@ -46,20 +46,27 @@ class Unit:
     def armMeleeWeapon(self, melee_weapon):
         self.melee_weapon = melee_weapon
 
-    def fireAtEnemy(self, enemy_unit):
-        armor_roll = random.randint(1,6)
-        if (self.shoot 
-            and armor_roll < enemy_unit.armor_save 
-            and enemy_unit.damaged(self.ranged_weapon.strength)):
-            if self.ranged_weapon.strength >= 2 * enemy_unit.toughness:
-                enemy_unit.wounds = 0
-                print("Unit insta-gibbed")
-            else:
-                enemy_unit.wounds -= 1
-                print("Enemy damaged, wounds reduced to "+enemy_unit.wounds.__str__())
-        if enemy_unit.wounds == 0:
-            print("He's dead Jim")
-            
+    def fireAtEnemy(self, enemy_unit, hit_kill_list):
+        for i in self.ranged_weapon.attacks:
+            if enemy_unit.wounds != 0:
+                armor_roll = random.randint(1,6)
+                enemy_save = enemy_unit.armor_save
+                if self.ranged_weapon.armor_pierce <= enemy_unit.armor_save:
+                    enemy_save = enemy_unit.invuln_save
+                if (self.shoot 
+                    and armor_roll < enemy_save
+                    and enemy_unit.damaged(self.ranged_weapon.strength)):
+                    hit_kill_list[0] += 1
+                    if self.ranged_weapon.strength >= 2 * enemy_unit.toughness:
+                        enemy_unit.wounds = 0
+                        print("Unit insta-gibbed")
+                    else:
+                        enemy_unit.wounds -= 1
+                        print("Enemy damaged, wounds reduced to "+enemy_unit.wounds.__str__())
+                if enemy_unit.wounds == 0:
+                    hit_kill_list[1] += 1
+                    print("He's dead Jim")
+        return hit_kill_list
 
     def shoot(self):
         roll = random.randint(1, 6)
