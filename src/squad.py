@@ -7,8 +7,8 @@ import csv
 "  Base class for all squads of units. This doesn't include vehicles or walkers
 """
 class Squad:
-
     def __init__(self, values):
+        self.army_name = values[0]
         self.squad_name = values[1]
         self.squad_type = values[2]
         self.units = []
@@ -53,10 +53,10 @@ class Squad:
         if self.current_size < self.max_size:
             if unit_name in self.additional_units:
                 unit_to_add = unit.PreloadedUnits[unit_name]
-                unit_to_add.armRangedWeapon(weapon.ranged_weapons[self.additional_units[unit_name][1]])
-                unit_to_add.armMeleeWeapon(weapon.melee_weapons[self.additional_units[unit_name][2]])
+                unit_to_add.armRangedWeapon(weapon.ranged_weapons[self.additional_units[unit_name][2]])
+                unit_to_add.armMeleeWeapon(weapon.melee_weapons[self.additional_units[unit_name][3]])
                 self.units.append(unit_to_add)
-                self.point_cost += self.additional_units[unit_name][0]
+                self.point_cost += self.additional_units[unit_name][1]
                 self.current_size += 1
 
     def __str__(self):
@@ -79,9 +79,11 @@ class Squad:
                     target += 1
         if target == enemy_size:
             print("Enemy unit wiped out")
-        print("Hits: {}    Kills: {}".format(total_hits_kills[0], total_hits_kills[1]))
+        #print("Hits: {}    Kills: {}".format(total_hits_kills[0], total_hits_kills[1]))
+        return (total_hits_kills[0], total_hits_kills[1])
 
 Squads = {"":""}
+DefSquads = {}
 
 squads = open("squads/squads.txt")
 reader = csv.reader(squads, delimiter='\t')
@@ -89,17 +91,9 @@ for row in reader:
     squad = Squad(row)
     Squads[row[1]] = squad
 
-print(Squads)
-tacSquad = Squads["Tactical Squad"]
+squads = open("squads/defSquads.txt")
+reader = csv.reader(squads, delimiter='\t')
+for row in reader:
+    squad = Squad(row)
+    DefSquads[row[1]] = squad
 
-print(tacSquad)
-print("\nAdded another unit")
-tacSquad.addUnit("Space Marine")
-tacSquad.addUnit("Space Marine")
-tacSquad.addUnit("Space Marine")
-tacSquad.addUnit("Space Marine")
-tacSquad.addUnit("Space Marine")
-print(tacSquad)
-
-enemySquad = Squads["Tactical Squad"]
-tacSquad.squadFire(enemySquad)

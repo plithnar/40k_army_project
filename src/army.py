@@ -7,12 +7,10 @@ Created on Thu Oct 16 11:01:26 2014
 import squad
 import unit
 import weapon
+import vehicle
 import csv
 
-#pylint: disable=C0103
-
-validArmies = ["Chaos", "Eldar", "Tau", "Ork", "Space Marine",
-                 "Imperial Guard", "Tyranid"]
+validArmies = ["Space Marine"]
 
 class Army:
     def __init__(self, value):
@@ -44,15 +42,30 @@ class Army:
         return s
 
     def AddHq(self, hqUnit):
-        if self.hq != [] and self.hq.count >= 2:
+        if self.hq != [] and len(self.hq) >= 2:
             raise Exception("Army can only have a max of 2 hq units")
-        self.hq.append(squad.Squads[hqUnit])
+        self.hq.append(hqUnit)
 
     def AddTroop(self, troopUnit):
         #I think it can only have 4 troop choices...?
-        if self.troop != [] and self.troop.count >= 4:
+        if self.troop != [] and len(self.troop) >= 4:
             raise Exception("Army can only have a max of 4 troop units")
-        self.troop.append(squad.Squads[troopUnit])
+        self.troop.append(troopUnit)
+
+    def AddHeavy(self, hqUnit):
+        if self.heavy != [] and len(self.heavy) >= 3:
+            raise Exception("Army can only have a max of 3 Heavy Support units")
+        self.heavy.append(hqUnit)
+
+    def AddElite(self, hqUnit):
+        if self.elite != [] and len(self.elite) >= 3:
+            raise Exception("Army can only have a max of 3 Elite units")
+        self.elite.append(hqUnit)
+
+    def AddFast(self, hqUnit):
+        if self.fast != [] and len(self.fast) >= 3:
+            raise Exception("Army can only have a max of 3 Fast Attack units")
+        self.fast.append(hqUnit)
 
     def SaveArmy(self, saveFilePath):
         saveString = self.race + "\n"
@@ -80,4 +93,23 @@ for row in reader:
         Armies[row[0]].heavy.append(row[1])
     if row[2] == "Fast Attack":
         Armies[row[0]].fast.append(row[1])
-print(Armies)
+
+
+
+squads = open("vehicles/vehicles.txt")
+reader = csv.reader(squads, delimiter='\t')
+for row in reader:
+    if row[0] not in Armies and row[0] in validArmies:
+        army = Army(row[0])
+        Armies[row[0]] = army
+    if row[2] == "Troop":
+        Armies[row[0]].troop.append(row[1])
+    if row[2] == "HQ":
+        Armies[row[0]].hq.append(row[1])
+    if row[2] == "Elite":
+        Armies[row[0]].elite.append(row[1])
+    if row[2] == "Heavy Support":
+        Armies[row[0]].heavy.append(row[1])
+    if row[2] == "Fast Attack":
+        Armies[row[0]].fast.append(row[1])
+#print(Armies)

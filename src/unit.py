@@ -59,13 +59,10 @@ class Unit:
                     hit_kill_list[0] += 1
                     if self.ranged_weapon.strength >= 2 * enemy_unit.toughness:
                         enemy_unit.wounds = 0
-                        print("Unit insta-gibbed")
                     else:
                         enemy_unit.wounds -= 1
-                        print("Enemy damaged, wounds reduced to "+enemy_unit.wounds.__str__())
                 if enemy_unit.wounds == 0:
                     hit_kill_list[1] += 1
-                    print("He's dead Jim")
         return hit_kill_list
 
     def shoot(self):
