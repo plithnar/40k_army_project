@@ -20,7 +20,4 @@ Storm bolter, 24, 4, 5, Assault, 2
 Shoota, 18, 4, 6, Assault, 2
 Big shoota, 36, 5, 5, Assault, 3
 Rokkit launcha, 24, 8, 3, Assault, 1
-Deffgun, 18, 5, 5, Assault, 2
-Snazzgun, 24, 5, 3, Assault, 1
-Blasta, 12, 3, 7, Assault, 1
-Slugga, 12, 4, 6, Assault, 1
+Deffgun, 18, 5, 5, Assault, 3

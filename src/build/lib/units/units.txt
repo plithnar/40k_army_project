@@ -17,14 +17,10 @@ Scout Sergeant, 4, 4, 4, 4, 1, 4, 2, 9, 4, 7
 Space Marine, 4, 4, 4, 4, 1, 4, 1, 8, 3, 7
 Space Marine Biker, 4, 4, 4, 5, 1, 4, 1, 8, 3, 7
 Space Marine Sergeant, 4, 4, 4, 4, 2, 4, 1, 9, 3, 7
-Terminator, 4, 4, 4, 4, 2, 4, 2, 9, 2, 5
-Terminator Sergeant, 4, 4, 4, 4, 2, 4, 2, 9, 2, 5
+Terminator, 4, 4, 4, 4, 1, 4, 2, 9, 2, 5
+Terminator Sergeant, 4, 4, 4, 4, 1, 4, 2, 9, 2, 5
 Veteran, 4, 4, 4, 4, 1, 4, 2, 9, 3, 7
 Ork Boyz, 4, 2, 3, 4, 1, 2, 2, 7, 6, 7
 Nob, 4, 2, 4, 4, 2, 3, 3, 7, 6, 7
 Warboss, 5, 2, 5, 5, 3, 4, 4, 9, 6, 7
 Loota, 4, 2, 3, 4, 1, 2, 2, 7, 6, 7
-Flash Git, 4, 2, 4, 4, 2, 3, 3, 7, 4, 7
-Gretchin, 2, 3, 2, 2, 1, 2, 1, 5, 7, 7
-Runtherd, 4, 2, 3, 4, 1, 2, 2, 7, 6, 7
-Deffkopta, 4, 2, 3, 4, 2, 2, 2, 7, 4, 7
